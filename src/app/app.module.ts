@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FeatureModule } from './feature/feature.module';
+import { StarRatingComponent } from './feature/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FeatureModule } from './feature/feature.module';
     HomeComponent,
     MovieComponent,
     HeaderComponent,
+    StarRatingComponent,
   ],
   imports: [
     BrowserModule,
