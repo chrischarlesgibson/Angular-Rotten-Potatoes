@@ -19,7 +19,6 @@ import { StarRatingComponent } from './feature/star-rating/star-rating.component
     HomeComponent,
     MovieComponent,
     HeaderComponent,
-    StarRatingComponent,
   ],
   imports: [
     BrowserModule,
