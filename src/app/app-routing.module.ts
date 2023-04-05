@@ -20,7 +20,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  //forRoot() is a static method used to define the router configuration for the application root level. It takes an array of routes and returns a module with the configured router.
   imports: [RouterModule.forRoot(routes)],
+  //exports: [RouterModule] is used to export the configured RouterModule for use in other modules that need routing functionality.
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -1,9 +1,18 @@
+<!-- Defines a template with a template reference variable "t" that takes in a context object with a property "fill". -->
 <ng-template #t let-fill="fill">
+  <!-- Defines a span element with class "star". Adds the class "full" if "fill" is equal to 100. -->
   <span class="star" [class.full]="fill === 100">
+    <!-- Defines a nested span element with class "half". Sets its width to "fill" using style binding. 
+           Displays a heart symbol inside the span element. -->
     <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
   </span>
 </ng-template>
 
+<!-- Defines a NgbRating component with the following input bindings: 
+       - "rate" is bound to the "rating" property in the component's class.
+       - "starTemplate" is bound to the template reference variable "t".
+       - "readonly" is bound to the "isReadOnly" property in the component's class.
+       - "max" is bound to the value 5. -->
 <ngb-rating
   [(rate)]="rating"
   [starTemplate]="t"

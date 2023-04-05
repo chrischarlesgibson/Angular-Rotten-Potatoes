@@ -10,10 +10,10 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FeatureModule } from './feature/feature.module';
-import { StarRatingComponent } from './feature/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
+    // The declarations array lists all of the components, directives, and pipes that belong to this module.
     AppComponent,
     LoginComponent,
     HomeComponent,
@@ -21,13 +21,14 @@ import { StarRatingComponent } from './feature/star-rating/star-rating.component
     HeaderComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    FeatureModule,
+    // The imports array lists all of the modules that this module depends on.
+    BrowserModule, // Required to run the app in a browser
+    AppRoutingModule, // This is the custom routing module for the app
+    FormsModule, // Required to use two-way data binding in the app
+    HttpClientModule, // Required to make HTTP requests
+    FeatureModule, // This is a custom feature module that this app module depends on
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent], // This specifies the root component that Angular should bootstrap when it starts the app
 })
 export class AppModule {}

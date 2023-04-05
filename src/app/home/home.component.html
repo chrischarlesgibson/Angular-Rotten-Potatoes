@@ -1,22 +1,45 @@
 <app-header></app-header>
+<!-- Header component -->
 <div class="home-container">
+  <!-- Home page container -->
   <div class="all-movies">
+    <!-- Section for all movies -->
     <div class="trending-movies">
+      <!-- Section for trending movies -->
       <div class="top">
         <h4>Trending Movies</h4>
+        <!-- Heading for trending movies -->
         <div class="view-all">View All</div>
+        <!-- View all button for trending movies -->
       </div>
       <div class="movies-thumbnail">
+        <!-- Thumbnails for trending movies -->
         <div class="movie" *ngFor="let movie of trendingMovies">
+          <!-- Movie thumbnail for trending movies using ngFor loop -->
           <div class="cover" (click)="goToMovie('trending', movie.id)">
+            <!-- Movie cover for trending movies -->
             <img [src]="movie.cover" alt="" />
+            <!-- Movie cover image -->
           </div>
           <div class="detail">
+            <!-- Details of the movie -->
             <div class="name" (click)="goToMovie('trending', movie.id)">
+              <!-- Movie name -->
               {{ movie.name }}
             </div>
             <div class="rating">
+              <!-- Movie rating -->
               <span class="rating-value">{{ movie.rating }}</span>
+              <!-- Movie rating value -->
+              <!--
+                Star
+                rating
+                component
+                for
+                the
+                movie
+                rating
+                -->
               <app-star-rating
                 [rating]="movie.rating"
                 [isReadOnly]="true"
@@ -27,21 +50,41 @@
       </div>
     </div>
     <div class="theatre-movies">
+      <!-- Section for movies in theatres -->
       <div class="top">
         <h4>Popular in Theatres</h4>
+        <!-- Heading for movies in theatres -->
         <div class="view-all">View All</div>
+        <!-- View all button for movies in theatres -->
       </div>
       <div class="movies-thumbnail">
+        <!-- Thumbnails for movies in theatres -->
         <div class="movie" *ngFor="let movie of theatreMovies">
+          <!-- Movie thumbnail for movies in theatres using ngFor loop -->
           <div class="cover" (click)="goToMovie('theatre', movie.id)">
+            <!-- Movie cover for movies in theatres -->
             <img [src]="movie.cover" alt="" />
+            <!-- Movie cover image -->
           </div>
           <div class="detail">
+            <!-- Details of the movie -->
             <div class="name" (click)="goToMovie('theatre', movie.id)">
+              <!-- Movie name -->
               {{ movie.name }}
             </div>
             <div class="rating">
+              <!-- Movie rating -->
               <span class="rating-value">{{ movie.rating }}</span>
+              <!-- Movie rating value -->
+              <!--
+                Star
+                rating
+                component
+                for
+                the
+                movie
+                rating
+                -->
               <app-star-rating
                 [rating]="movie.rating"
                 [isReadOnly]="true"
@@ -53,9 +96,14 @@
     </div>
   </div>
   <div class="popular-movies">
+    <!-- Section for popular movies -->
     <h4>All Time Popular</h4>
+    <!-- Heading for popular movies -->
     <div class="movies">
+      <!-- Thumbnails for popular movies -->
       <div class="movie" *ngFor="let movie of popularMovies">
+        <!-- Movie thumbnail for popular movies using ngFor loop -->
+
         <div class="name" (click)="goToMovie('popular', movie.id)">
           {{ movie.name }}
         </div>
